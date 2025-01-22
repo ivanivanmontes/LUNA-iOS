@@ -1,17 +1,17 @@
-//
-//  LUNAApp.swift
-//  LUNA
-//
-//  Created by Ivan Montes on 8/12/24.
-//
 
 import SwiftUI
 
 @main
 struct LUNAApp: App {
+    @StateObject var appState = AppState()
+    @StateObject private var userViewModel = UserViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            customTabBar()
+                .environmentObject(appState)
+                .environmentObject(userViewModel)
+                
+            
         }
     }
 }

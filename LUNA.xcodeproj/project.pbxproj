@@ -7,18 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0705D52CBDE737004CEC43 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0705D42CBDE737004CEC43 /* TabBar.swift */; };
+		6D0705D72CBDEC96004CEC43 /* addPinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0705D62CBDEC96004CEC43 /* addPinButton.swift */; };
+		6D4341BD2CC00E11001836BB /* addPinModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4341BC2CC00E11001836BB /* addPinModal.swift */; };
+		6D53DB462CBDB8260025FDD0 /* addPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53DB452CBDB8260025FDD0 /* addPinView.swift */; };
+		6D53DB482CBDB85D0025FDD0 /* partnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53DB472CBDB85D0025FDD0 /* partnerView.swift */; };
+		6D53DB4A2CBDB8800025FDD0 /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53DB492CBDB8800025FDD0 /* settingsView.swift */; };
+		6D53DB4C2CBDCB490025FDD0 /* customTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53DB4B2CBDCB490025FDD0 /* customTabBar.swift */; };
+		6D6DE8CA2CBB5C3C004E3A0F /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE8C92CBB5C3B004E3A0F /* homeView.swift */; };
+		6D6DE8CC2CBB5E65004E3A0F /* pinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DE8CB2CBB5E65004E3A0F /* pinListView.swift */; };
+		6D88BE422C8FB860002B9F2B /* CounterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE412C8FB860002B9F2B /* CounterData.swift */; };
+		6D88BE482C8FC0AF002B9F2B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE472C8FC0AF002B9F2B /* UserData.swift */; };
+		6D88BE4E2C950DDC002B9F2B /* PinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE4D2C950DDC002B9F2B /* PinData.swift */; };
+		6D88BE502C98C1E2002B9F2B /* MemoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE4F2C98C1E2002B9F2B /* MemoryData.swift */; };
+		6D88BE522C98C30D002B9F2B /* UserPartnershipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE512C98C30D002B9F2B /* UserPartnershipData.swift */; };
+		6D88BE542C98C4C6002B9F2B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE532C98C4C6002B9F2B /* LoginRequest.swift */; };
+		6D88BE562C98C69E002B9F2B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D88BE552C98C69E002B9F2B /* UserViewModel.swift */; };
 		6DD4DBC32C6AC198005A662E /* LUNAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4DBC22C6AC198005A662E /* LUNAApp.swift */; };
-		6DD4DBC52C6AC198005A662E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4DBC42C6AC198005A662E /* ContentView.swift */; };
 		6DD4DBC72C6AC199005A662E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD4DBC62C6AC199005A662E /* Assets.xcassets */; };
 		6DD4DBCA2C6AC199005A662E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD4DBC92C6AC199005A662E /* Preview Assets.xcassets */; };
+		6DF90BAD2CBF3A1800918174 /* pinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF90BAC2CBF3A1800918174 /* pinDetailView.swift */; };
+		6DF90BAF2CBF3FFD00918174 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF90BAE2CBF3FFD00918174 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D0705D42CBDE737004CEC43 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		6D0705D62CBDEC96004CEC43 /* addPinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPinButton.swift; sourceTree = "<group>"; };
+		6D4341BC2CC00E11001836BB /* addPinModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPinModal.swift; sourceTree = "<group>"; };
+		6D53DB452CBDB8260025FDD0 /* addPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPinView.swift; sourceTree = "<group>"; };
+		6D53DB472CBDB85D0025FDD0 /* partnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partnerView.swift; sourceTree = "<group>"; };
+		6D53DB492CBDB8800025FDD0 /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
+		6D53DB4B2CBDCB490025FDD0 /* customTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTabBar.swift; sourceTree = "<group>"; };
+		6D6DE8C92CBB5C3B004E3A0F /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
+		6D6DE8CB2CBB5E65004E3A0F /* pinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinListView.swift; sourceTree = "<group>"; };
+		6D88BE412C8FB860002B9F2B /* CounterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterData.swift; sourceTree = "<group>"; };
+		6D88BE472C8FC0AF002B9F2B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		6D88BE4D2C950DDC002B9F2B /* PinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinData.swift; sourceTree = "<group>"; };
+		6D88BE4F2C98C1E2002B9F2B /* MemoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryData.swift; sourceTree = "<group>"; };
+		6D88BE512C98C30D002B9F2B /* UserPartnershipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPartnershipData.swift; sourceTree = "<group>"; };
+		6D88BE532C98C4C6002B9F2B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		6D88BE552C98C69E002B9F2B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		6DD4DBBF2C6AC198005A662E /* LUNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LUNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD4DBC22C6AC198005A662E /* LUNAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUNAApp.swift; sourceTree = "<group>"; };
-		6DD4DBC42C6AC198005A662E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DD4DBC62C6AC199005A662E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DD4DBC92C6AC199005A662E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6DF90BAC2CBF3A1800918174 /* pinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinDetailView.swift; sourceTree = "<group>"; };
+		6DF90BAE2CBF3FFD00918174 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +66,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D88BE3C2C8FB61C002B9F2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D6DE8C92CBB5C3B004E3A0F /* homeView.swift */,
+				6D6DE8CB2CBB5E65004E3A0F /* pinListView.swift */,
+				6D53DB452CBDB8260025FDD0 /* addPinView.swift */,
+				6D53DB472CBDB85D0025FDD0 /* partnerView.swift */,
+				6D53DB492CBDB8800025FDD0 /* settingsView.swift */,
+				6D53DB4B2CBDCB490025FDD0 /* customTabBar.swift */,
+				6D0705D42CBDE737004CEC43 /* TabBar.swift */,
+				6D0705D62CBDEC96004CEC43 /* addPinButton.swift */,
+				6DF90BAC2CBF3A1800918174 /* pinDetailView.swift */,
+				6D4341BC2CC00E11001836BB /* addPinModal.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6D88BE3D2C8FB643002B9F2B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6D88BE552C98C69E002B9F2B /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6D88BE3E2C8FB64D002B9F2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D88BE412C8FB860002B9F2B /* CounterData.swift */,
+				6D88BE472C8FC0AF002B9F2B /* UserData.swift */,
+				6D88BE4D2C950DDC002B9F2B /* PinData.swift */,
+				6D88BE4F2C98C1E2002B9F2B /* MemoryData.swift */,
+				6D88BE512C98C30D002B9F2B /* UserPartnershipData.swift */,
+				6D88BE532C98C4C6002B9F2B /* LoginRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6DD4DBB62C6AC198005A662E = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +123,13 @@
 		6DD4DBC12C6AC198005A662E /* LUNA */ = {
 			isa = PBXGroup;
 			children = (
+				6D88BE3E2C8FB64D002B9F2B /* Models */,
+				6D88BE3D2C8FB643002B9F2B /* ViewModels */,
+				6D88BE3C2C8FB61C002B9F2B /* Views */,
 				6DD4DBC22C6AC198005A662E /* LUNAApp.swift */,
-				6DD4DBC42C6AC198005A662E /* ContentView.swift */,
 				6DD4DBC62C6AC199005A662E /* Assets.xcassets */,
 				6DD4DBC82C6AC199005A662E /* Preview Content */,
+				6DF90BAE2CBF3FFD00918174 /* AppState.swift */,
 			);
 			path = LUNA;
 			sourceTree = "<group>";
@@ -137,7 +212,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DD4DBC52C6AC198005A662E /* ContentView.swift in Sources */,
+				6D53DB4A2CBDB8800025FDD0 /* settingsView.swift in Sources */,
+				6D4341BD2CC00E11001836BB /* addPinModal.swift in Sources */,
+				6D88BE502C98C1E2002B9F2B /* MemoryData.swift in Sources */,
+				6DF90BAF2CBF3FFD00918174 /* AppState.swift in Sources */,
+				6D88BE522C98C30D002B9F2B /* UserPartnershipData.swift in Sources */,
+				6D53DB462CBDB8260025FDD0 /* addPinView.swift in Sources */,
+				6D53DB4C2CBDCB490025FDD0 /* customTabBar.swift in Sources */,
+				6D0705D72CBDEC96004CEC43 /* addPinButton.swift in Sources */,
+				6D6DE8CC2CBB5E65004E3A0F /* pinListView.swift in Sources */,
+				6DF90BAD2CBF3A1800918174 /* pinDetailView.swift in Sources */,
+				6D0705D52CBDE737004CEC43 /* TabBar.swift in Sources */,
+				6D88BE542C98C4C6002B9F2B /* LoginRequest.swift in Sources */,
+				6D6DE8CA2CBB5C3C004E3A0F /* homeView.swift in Sources */,
+				6D53DB482CBDB85D0025FDD0 /* partnerView.swift in Sources */,
+				6D88BE4E2C950DDC002B9F2B /* PinData.swift in Sources */,
+				6D88BE482C8FC0AF002B9F2B /* UserData.swift in Sources */,
+				6D88BE562C98C69E002B9F2B /* UserViewModel.swift in Sources */,
+				6D88BE422C8FB860002B9F2B /* CounterData.swift in Sources */,
 				6DD4DBC32C6AC198005A662E /* LUNAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LUNA/Preview Content\"";
@@ -280,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,7 +391,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LUNA/Preview Content\"";
@@ -309,6 +405,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
