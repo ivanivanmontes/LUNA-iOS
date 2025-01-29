@@ -16,7 +16,7 @@ class AppState: ObservableObject {
             title: "",
             description: "",
             mediaUrls: [],
-            coordinate: Coordinate(latitude: 0.0, longitude: 0.0),
+            coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
             creationDate: Date(),
             userID: 0
         )

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct customTabBar: View {
     @State private var selectedTab = 0
+    @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -42,6 +43,8 @@ struct customTabBar: View {
             }
 
                 
+        }.onAppear {
+            userViewModel.fetchUserData(userId: 1)
         }
     }
 }

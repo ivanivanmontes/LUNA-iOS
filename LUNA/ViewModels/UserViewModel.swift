@@ -1,6 +1,7 @@
 
 import Combine
 import Foundation
+import MapKit
 
 class UserViewModel: ObservableObject {
     @Published var userData: UserData?
@@ -32,15 +33,16 @@ class UserViewModel: ObservableObject {
             do {
                 if let JSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                     DispatchQueue.main.async {
+                        /// i wanna see if i dont need to do this
                         if self.userData == nil {
-                            self.userData = UserData(id: 0, username: "", firstName: "", lastName: "", email: "", partnershipID: 0, isLoggedIn: false)
+                            self.userData = UserData(id: 10, username: "", firstName: "", lastName: "", email: "", partnershipID: 0, isLoggedIn: false)
                         }
-                        print("only do this once")
                         self.userData?.id = JSON["user_id"] as? Int
                         self.userData?.username = JSON["username"] as? String
                         self.userData?.firstName = JSON["first_name"] as? String
                         self.userData?.partnershipID = JSON["partnership_id"] as? Int
                         self.userData?.email = JSON["email"] as? String
+                        print("fetching user data done")
                     }
                 }
                 
@@ -56,11 +58,10 @@ class UserViewModel: ObservableObject {
         
     }
     
-    func fetchUserPins(userId: Int) {
-        guard !isPinDataLoaded else { return }
+    func fetchUserPins() {
+        guard !isPinDataLoaded, isUserDataLoaded else { return }
         isPinDataLoaded = true
-        
-        guard let url = URL(string: "http://127.0.0.1:8000/get_all_pins/\(userId)")
+        guard let url = URL(string: "http://127.0.0.1:8000/get_all_pins/\(self.userData?.id ?? 10)")
         else { return }
         
         var request = URLRequest(url: url)
@@ -87,13 +88,17 @@ class UserViewModel: ObservableObject {
                                 let id = dict["pin_id"] as? Int,
                                 let title = dict["title"] as? String,
                                 let description = dict["details"] as? String,
-                                let coordinate = Coordinate(latitude: 34.0113, longitude: -118.4921) as? Coordinate,
+                                let coordinate = CLLocationCoordinate2D(
+                                        latitude: 34.0113,
+                                        longitude: -118.4921
+                                    ) as? CLLocationCoordinate2D,
                                 let creationDate = Date() as? Date
                             else { return nil }
                             
-                            return PinData(id: id, title: title, description: description, mediaUrls: [], coordinate: coordinate, creationDate: creationDate, userID: userId)
+                            return PinData(id: id, title: title, description: description, mediaUrls: [], coordinate: coordinate, creationDate: creationDate, userID: self.userData?.id ?? 10)
                         }
                         self.userPins = pins
+                        print("fetching pins done")
 //                        print("\(self.userPins.?.first?.description ?? "No Pins")")
                     }
                 }

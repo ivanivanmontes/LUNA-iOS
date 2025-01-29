@@ -58,7 +58,7 @@ struct pinListView: View {
                 }
                 
             }.onAppear {
-                userViewModel.fetchUserPins(userId: 1)
+                userViewModel.fetchUserPins()
             }
     }
 }

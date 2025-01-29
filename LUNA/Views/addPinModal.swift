@@ -4,8 +4,9 @@
 //
 //  Created by Ivan Montes on 10/16/24.
 //
-
+import Foundation
 import SwiftUI
+import MapKit
 
 struct addPinModal: View {
     @Environment(\.dismiss) var dismiss
@@ -45,6 +46,7 @@ struct addPinModal: View {
             }
             Spacer()
             Button(action: {
+                appState.currentPin.coordinate = appState.centerCoordinate
                 print("\(appState.currentPin)")
                 dismiss()
             }) {

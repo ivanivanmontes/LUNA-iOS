@@ -19,7 +19,7 @@ struct partnerView: View {
             Text("")
         }
     }.onAppear {
-        userViewModel.fetchUserData(userId: 1)
+        //userViewModel.fetchUserData(userId: 1)
     }
     }
         

@@ -30,8 +30,8 @@
             filePath = "LUNA/ViewModels/UserViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "fetchUserData(userId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -91,9 +91,9 @@
             filePath = "LUNA/ViewModels/UserViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "fetchUserPins(userId:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchUserPins()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
