@@ -57,8 +57,6 @@ struct pinListView: View {
                     Text("")
                 }
                 
-            }.onAppear {
-                userViewModel.fetchUserPins()
             }
     }
 }

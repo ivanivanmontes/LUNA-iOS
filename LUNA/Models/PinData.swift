@@ -11,7 +11,7 @@ struct PinData: Identifiable {
     var title: String
     var description: String
     var mediaUrls: [String] = []
-    var coordinate: Coordinate // change this back to Coordinate. when placing on map just go back to cllocationcoordinate2d
+    var coordinate: Coordinate
     var creationDate: Date
     var userID: Int
 }

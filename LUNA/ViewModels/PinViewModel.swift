@@ -1,15 +1,15 @@
 import Foundation
+import SwiftUICore
 import Combine
 import MapKit
 
 class PinViewModel: ObservableObject {
-    @Published var userData: UserData?
-    
+    @EnvironmentObject var userViewModel: UserViewModel
     
     
     func addPin() {
         //TODO: guard user id
-        guard let url = URL(string: "http://127.0.0.1:8000/create_pin/\(self.userData?.id ?? 10)")
+        guard let url = URL(string: "http://127.0.0.1:8000/create_pin/\(userViewModel.userData?.id ?? 10)")
         else { return }
         
         var request = URLRequest(url: url)

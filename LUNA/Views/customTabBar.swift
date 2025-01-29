@@ -43,8 +43,6 @@ struct customTabBar: View {
             }
 
                 
-        }.onAppear {
-            userViewModel.fetchUserData(userId: 1)
         }
     }
 }

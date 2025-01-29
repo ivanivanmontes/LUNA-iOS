@@ -10,7 +10,15 @@ class UserViewModel: ObservableObject {
     private var isUserDataLoaded = false
     private var isPinDataLoaded = false
     
-    func fetchUserData(userId: Int) {
+    
+
+    init() {
+        fetchUserData(userId: 1) { [weak self] in
+            self?.fetchUserPins() // Only fetch pins after user data is loaded
+        }
+    }
+    
+    func fetchUserData(userId: Int, completion: @escaping () -> Void) {
         guard !isUserDataLoaded else { return } // Prevent multiple calls
         isUserDataLoaded = true
         
@@ -43,6 +51,7 @@ class UserViewModel: ObservableObject {
                         self.userData?.partnershipID = JSON["partnership_id"] as? Int
                         self.userData?.email = JSON["email"] as? String
                         print("fetching user data done")
+                        completion()
                     }
                 }
                 
@@ -54,19 +63,24 @@ class UserViewModel: ObservableObject {
         
         /// start the task
         task.resume()
-        
-        
     }
     
     func fetchUserPins() {
-        guard !isPinDataLoaded, isUserDataLoaded else { return }
+        guard !isPinDataLoaded else { return }
+        
+        guard let userID = self.userData?.id else {
+            print("cant find userid")
+            
+            return
+        }
+        
         isPinDataLoaded = true
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
-        guard let url = URL(string: "http://127.0.0.1:8000/get_all_pins/\(self.userData?.id ?? 10)")
+        guard let url = URL(string: "http://127.0.0.1:8000/get_all_pins/\(userID)")
         else { return }
         
         var request = URLRequest(url: url)

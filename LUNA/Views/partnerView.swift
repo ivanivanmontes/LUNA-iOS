@@ -18,8 +18,6 @@ struct partnerView: View {
         } else {
             Text("")
         }
-    }.onAppear {
-        //userViewModel.fetchUserData(userId: 1)
     }
     }
         
