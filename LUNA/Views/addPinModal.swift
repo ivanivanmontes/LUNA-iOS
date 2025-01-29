@@ -46,7 +46,9 @@ struct addPinModal: View {
             }
             Spacer()
             Button(action: {
-                appState.currentPin.coordinate = appState.centerCoordinate
+                appState.currentPin.coordinate.latitude = appState.centerCoordinate.latitude
+                appState.currentPin.coordinate.longitude = appState.centerCoordinate.longitude
+//                appState.currentPin.coordinate = appState.centerCoordinate
                 print("\(appState.currentPin)")
                 dismiss()
             }) {

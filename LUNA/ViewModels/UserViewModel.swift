@@ -61,6 +61,11 @@ class UserViewModel: ObservableObject {
     func fetchUserPins() {
         guard !isPinDataLoaded, isUserDataLoaded else { return }
         isPinDataLoaded = true
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        
         guard let url = URL(string: "http://127.0.0.1:8000/get_all_pins/\(self.userData?.id ?? 10)")
         else { return }
         
@@ -88,18 +93,14 @@ class UserViewModel: ObservableObject {
                                 let id = dict["pin_id"] as? Int,
                                 let title = dict["title"] as? String,
                                 let description = dict["details"] as? String,
-                                let coordinate = CLLocationCoordinate2D(
-                                        latitude: 34.0113,
-                                        longitude: -118.4921
-                                    ) as? CLLocationCoordinate2D,
-                                let creationDate = Date() as? Date
+                                let coordinate =
+                                    Coordinate(latitude: dict["latitude"] as! Double, longitude: dict["longitude"] as! Double) as? Coordinate,
+                                let creationDate = dateFormatter.date(from: dict["creation_date"] as! String)
                             else { return nil }
-                            
                             return PinData(id: id, title: title, description: description, mediaUrls: [], coordinate: coordinate, creationDate: creationDate, userID: self.userData?.id ?? 10)
                         }
                         self.userPins = pins
                         print("fetching pins done")
-//                        print("\(self.userPins.?.first?.description ?? "No Pins")")
                     }
                 }
                 
