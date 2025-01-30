@@ -14,7 +14,7 @@ class AppState: ObservableObject {
     @Published var currentPin: PinData = PinData(
             id: 0,
             title: "",
-            description: "",
+            details: "",
             mediaUrls: [],
             coordinate: Coordinate(latitude: 0.0, longitude: 0.0),
             creationDate: Date(),

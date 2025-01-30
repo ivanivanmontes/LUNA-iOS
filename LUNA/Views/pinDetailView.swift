@@ -14,7 +14,7 @@ struct pinDetailView: View {
             Text(pin.title)
                 .font(.largeTitle)
                 .bold()
-            Text(pin.description)
+            Text(pin.details)
                 .font(.body)
             
             Text("Coordinates: \(pin.coordinate.latitude), \(pin.coordinate.longitude)")
@@ -32,8 +32,4 @@ struct pinDetailView: View {
         }
         .padding()
     }
-}
-
-#Preview {
-    pinDetailView(pin: dummyPins[0])
 }

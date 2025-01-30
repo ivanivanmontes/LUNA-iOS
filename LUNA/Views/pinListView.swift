@@ -28,7 +28,7 @@ struct pinListView: View {
                                 VStack(alignment: .leading) {
                                     Text(pin.title)
                                         .font(.title)
-                                    Text(pin.description)
+                                    Text(pin.details)
                                         .font(.subheadline)
                                     
                                     Text(pin.creationDate.formatted(.dateTime))

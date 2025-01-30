@@ -26,8 +26,8 @@ struct homeView : View {
                 /// user pins. TODO: we force unwrap, what happens when the user has no pins, or no user to get pins from?
                 ///
                 if let userPins = userViewModel.userPins {
-                    ForEach(userPins) { pin in //TODO: change this back to the actual coords, this is so that they appear close
-                        Annotation("", coordinate: CLLocationCoordinate2D(latitude: 40.75090538616211, longitude: -73.9935464836636)) {
+                    ForEach(userPins) { pin in
+                        Annotation("", coordinate: CLLocationCoordinate2D(latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude)) {
                                     ZStack {
                                         Circle()
                                             .frame(width: 25, height: 25)

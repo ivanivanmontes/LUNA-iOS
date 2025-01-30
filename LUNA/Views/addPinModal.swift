@@ -11,6 +11,8 @@ import MapKit
 struct addPinModal: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var userViewModel : UserViewModel
+    @EnvironmentObject var pinViewModel: PinViewModel
     
     
     var body: some View {
@@ -37,7 +39,7 @@ struct addPinModal: View {
                     
                     Text("description")
                         .font(.headline)
-                    TextField(" description", text: $appState.currentPin.description)
+                    TextField(" description", text: $appState.currentPin.details)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                         .shadow(radius: 2)
@@ -46,10 +48,14 @@ struct addPinModal: View {
             }
             Spacer()
             Button(action: {
+                /// idk if i need to set this up as the current pin...
                 appState.currentPin.coordinate.latitude = appState.centerCoordinate.latitude
                 appState.currentPin.coordinate.longitude = appState.centerCoordinate.longitude
-//                appState.currentPin.coordinate = appState.centerCoordinate
                 print("\(appState.currentPin)")
+                
+                ///i do NOT like the way we're doing this. id and date fields are not used when adding a pin. userID is forced wrapped...
+                let newPin = PinData(id: 0, title: appState.currentPin.title, details: appState.currentPin.details, coordinate: Coordinate(latitude: appState.currentPin.coordinate.latitude, longitude: appState.currentPin.coordinate.longitude), creationDate: Date(), userID: userViewModel.userData!.id!)
+                pinViewModel.addPin(pin: newPin)
                 dismiss()
             }) {
                 Text("submit")

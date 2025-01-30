@@ -111,7 +111,7 @@ class UserViewModel: ObservableObject {
                                     Coordinate(latitude: dict["latitude"] as! Double, longitude: dict["longitude"] as! Double) as? Coordinate,
                                 let creationDate = dateFormatter.date(from: dict["creation_date"] as! String)
                             else { return nil }
-                            return PinData(id: id, title: title, description: description, mediaUrls: [], coordinate: coordinate, creationDate: creationDate, userID: self.userData?.id ?? 10)
+                            return PinData(id: id, title: title, details: description, mediaUrls: [], coordinate: coordinate, creationDate: creationDate, userID: self.userData?.id ?? 10)
                         }
                         self.userPins = pins
                         print("fetching pins done")
