@@ -22,7 +22,7 @@ class UserViewModel: ObservableObject {
         guard !isUserDataLoaded else { return } // Prevent multiple calls
         isUserDataLoaded = true
         
-        guard let url = URL(string: "http://127.0.0.1:8000/get_user/\(userId)") else { return }
+        guard let url = URL(string: "http://luna-backend-production-0459.up.railway.app/get_user/\(userId)") else { return }
         
         var request = URLRequest(url: url)
         
@@ -80,7 +80,7 @@ class UserViewModel: ObservableObject {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
-        guard let url = URL(string: "http://127.0.0.1:8000/get_all_pins/\(userID)")
+        guard let url = URL(string: "http://luna-backend-production-0459.up.railway.app/get_all_pins/\(userID)")
         else { return }
         
         var request = URLRequest(url: url)
